@@ -1,9 +1,9 @@
 output "dn" {
-  value       = aci_rest_managed.fvTenant.id
-  description = "Distinguished name of `fvTenant` object."
+  value       = aci_rest_managed.eigrpIfPol.id
+  description = "Distinguished name of `eigrpIfPol` object."
 }
 
 output "name" {
-  value       = aci_rest_managed.fvTenant.content.name
-  description = "Tenant name."
+  value       = aci_rest_managed.eigrpIfPol.content.name
+  description = "EIGRP interface policy name."
 }
