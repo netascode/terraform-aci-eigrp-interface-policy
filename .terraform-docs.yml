@@ -1,16 +1,16 @@
-version: '>= 0.14.0'
+version: ">= 0.14.0"
 
 formatter: markdown table
 
 content: |-
-  [![Tests](https://github.com/netascode/terraform-aci-scaffolding/actions/workflows/test.yml/badge.svg)](https://github.com/netascode/terraform-aci-scaffolding/actions/workflows/test.yml)
+  [![Tests](https://github.com/netascode/terraform-aci-eigrp-interface-policy/actions/workflows/test.yml/badge.svg)](https://github.com/netascode/terraform-aci-eigrp-interface-policy/actions/workflows/test.yml)
 
-  # Terraform ACI Scaffolding Module
+  # Terraform ACI EIGRP Interface Policy Module
 
-  Description
+  Manages ACI EIGRP Interface Policy
 
   Location in GUI:
-  `Tenants` » `XXX`
+  `Tenants` » `XXX` » `Policies` » `Protocol` » `EIGRP` » `EIGRP Interface`
 
   ## Examples
 

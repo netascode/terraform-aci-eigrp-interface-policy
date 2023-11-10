@@ -1,23 +1,32 @@
 <!-- BEGIN_TF_DOCS -->
-[![Tests](https://github.com/netascode/terraform-aci-scaffolding/actions/workflows/test.yml/badge.svg)](https://github.com/netascode/terraform-aci-scaffolding/actions/workflows/test.yml)
+[![Tests](https://github.com/netascode/terraform-aci-eigrp-interface-policy/actions/workflows/test.yml/badge.svg)](https://github.com/netascode/terraform-aci-eigrp-interface-policy/actions/workflows/test.yml)
 
-# Terraform ACI Scaffolding Module
+# Terraform ACI EIGRP Interface Policy Module
 
-Description
+Manages ACI EIGRP Interface Policy
 
 Location in GUI:
-`Tenants` » `XXX`
+`Tenants` » `XXX` » `Policies` » `Protocol` » `EIGRP` » `EIGRP Interface`
 
 ## Examples
 
 ```hcl
-module "aci_scaffolding" {
-  source  = "netascode/scaffolding/aci"
-  version = ">= 0.0.1"
+module "aci_eigrp_interface_policy" {
+  source  = "netascode/eigrp-interface-policy/aci"
+  version = ">= 0.1.0"
 
-  name        = "ABC"
-  alias       = "ABC-ALIAS"
-  description = "My Description"
+  tenant            = "TF"
+  name              = "EIGRP1"
+  description       = "My Description"
+  hello_interval    = 10
+  hold_interval     = 30
+  bandwidth         = 10
+  delay             = 20
+  delay_unit        = "pico"
+  bfd               = true
+  self_nexthop      = true
+  passive_interface = true
+  split_horizon     = true
 }
 ```
 
